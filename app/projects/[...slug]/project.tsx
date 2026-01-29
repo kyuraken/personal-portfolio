@@ -11,6 +11,10 @@ import {
   ProjectDetailsContainer,
   ProjectDetailsTitle,
   ProjectSubtitle,
+  TechStackContainer,
+  TechStackItem,
+  TechStackList,
+  TechStackTitle,
 } from './styles';
 
 interface ProjectProps {
@@ -33,6 +37,16 @@ const Project = ({ project }: ProjectProps) => {
         </ProjectDetailImageContainer>
         <ContentContainer>
           <MDXContent code={project.content} />
+          {project.techStack && project.techStack.length > 0 ? (
+            <TechStackContainer>
+              <TechStackTitle>Languages/Tech</TechStackTitle>
+              <TechStackList>
+                {project.techStack.map((item) => (
+                  <TechStackItem key={item}>{item}</TechStackItem>
+                ))}
+              </TechStackList>
+            </TechStackContainer>
+          ) : null}
           <LinkContainer>
             <Link href="/">← View more projects</Link>
           </LinkContainer>

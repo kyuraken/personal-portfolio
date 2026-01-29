@@ -52,6 +52,37 @@ export const ContentContainer = styled.div`
   }
 `;
 
+export const TechStackContainer = styled.div`
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.2);
+`;
+
+export const TechStackTitle = styled.h4`
+  font-size: clamp(0.9rem, 2.2vw, 1.05rem);
+  font-weight: 600;
+  color: #e5e7eb;
+  margin-bottom: 0.75rem;
+`;
+
+export const TechStackList = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+`;
+
+export const TechStackItem = styled.li`
+  font-size: 0.85rem;
+  color: #cbd5f5;
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(99, 102, 241, 0.15);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+`;
+
 export const LinkContainer = styled.div`
   margin: 5rem 0;
   display: flex;

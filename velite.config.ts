@@ -18,6 +18,7 @@ const projects = defineCollection({
       transitionImage: s.image(), // input image relative path, output image object with blurImage.
       sourceCodeLink: s.string().max(99).optional(),
       liveLink: s.string().max(99).optional(),
+      techStack: s.array(s.string().max(40)).optional(),
       isLiveLinkDisabled: s.boolean().default(false).optional(),
       isSourceCodeLinkDisabled: s.boolean().default(false).optional(),
       content: s.mdx(), // transform markdown to html
