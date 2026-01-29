@@ -76,14 +76,6 @@ export const metadata: Metadata = {
       'Jason Hua is a computer science student and software engineer focused on intelligent systems and security.',
     url: 'https://jasonhua.vercel.app/',
     siteName: 'Jason Hua Portfolio',
-    images: [
-      {
-        url: 'https://i.ibb.co/D7ZpgxX/jason-hua.png',
-        width: 1200,
-        height: 630,
-        alt: 'Jason Hua Portfolio',
-      },
-    ],
     locale: 'en_US',
     type: 'website',
   },
