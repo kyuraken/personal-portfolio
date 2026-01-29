@@ -41,7 +41,7 @@ const Project = ({ project }: ProjectProps) => {
             <TechStackContainer>
               <TechStackTitle>Languages/Tech</TechStackTitle>
               <TechStackList>
-                {project.techStack.map((item) => (
+                {project.techStack.map((item: string) => (
                   <TechStackItem key={item}>{item}</TechStackItem>
                 ))}
               </TechStackList>

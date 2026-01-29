@@ -81,6 +81,17 @@ export const TechStackItem = styled.li`
   border-radius: 999px;
   background: rgba(99, 102, 241, 0.15);
   border: 1px solid rgba(99, 102, 241, 0.3);
+  transition: transform 180ms ease, box-shadow 180ms ease,
+    border-color 180ms ease, color 180ms ease, background 180ms ease;
+
+  &:hover,
+  &:focus-visible {
+    transform: translateY(-2px) scale(1.03);
+    color: #f8fafc;
+    border-color: rgba(250, 204, 21, 0.7);
+    background: rgba(250, 204, 21, 0.12);
+    box-shadow: 0 6px 16px rgba(250, 204, 21, 0.25);
+  }
 `;
 
 export const LinkContainer = styled.div`
