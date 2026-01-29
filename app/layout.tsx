@@ -57,7 +57,7 @@ const fira_code = localFont({
 export const metadata: Metadata = {
   title: 'Jason Hua Portfolio',
   description:
-    'Jason Hua is a developer based in Philippines who specializes in building responsive websites.',
+    'Jason Hua is a computer science student and software engineer focused on intelligent systems and security.',
   metadataBase: new URL('https://jasonhua.vercel.app'),
   authors: [{ name: 'Jason Hua' }],
   creator: 'Jason Hua',
@@ -69,12 +69,11 @@ export const metadata: Metadata = {
     'jason hua',
     'software engineer portfolio',
     'web developer portfolio',
-    'monciego',
   ],
   openGraph: {
     title: 'Jason Hua Portfolio',
     description:
-      'Jason Hua is a software engineer based in Philippines who specializes in building responsive websites.',
+      'Jason Hua is a computer science student and software engineer focused on intelligent systems and security.',
     url: 'https://jasonhua.vercel.app/',
     siteName: 'Jason Hua Portfolio',
     images: [
