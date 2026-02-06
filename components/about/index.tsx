@@ -74,14 +74,12 @@ export const About: React.FunctionComponent<IAboutProps> = () => {
           JavaScript, TypeScript, React, Node.js, Express, MongoDB, MySQL,
           Firebase, Docker, and Git. I’ve applied these tools across full-stack
           web applications, embedded systems, and machine learning projects.
-          While my work spans multiple domains, I am especially comfortable
+          While my work spans multiple domains, I am comfortable with
           building end-to-end systems—from backend APIs and databases to
-          frontend interfaces—while keeping performance and reliability in
-          mind. Currently, I am continuing to deepen my understanding of data
+          frontend interfaces. Currently, I am continuing to deepen my understanding of data
           structures, systems programming, machine learning, and AI, while
           expanding my experience with modern development tools and
-          architectures. I’m particularly interested in the intersection of
-          intelligence, security, and real-world applications.
+          architectures.
         </AboutDescription>
         <AboutDescription>
           Outside of software development, I enjoy watching sports (Go{' '}
