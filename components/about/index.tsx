@@ -1,10 +1,12 @@
+'use client';
+
+import { useState } from 'react';
 import { SectionHeading } from '../ui/section-heading';
 import { AboutImage } from './about-images';
 import {
   AboutContainer,
   AboutDescription,
   AboutDescriptionContainer,
-  DownloadIcon,
   GlowTag,
   ResumeLink,
   ResumeLinkContainer,
@@ -13,6 +15,8 @@ import {
 export interface IAboutProps {}
 
 export const About: React.FunctionComponent<IAboutProps> = () => {
+  const [isResumeVisible, setIsResumeVisible] = useState(false);
+
   return (
     <AboutContainer id="about" className="container">
       <SectionHeading
@@ -34,9 +38,9 @@ export const About: React.FunctionComponent<IAboutProps> = () => {
           So naturally, when you tell a kid they cannot do something, what do
           you do? You rebel. While other kids were sneaking out or getting into
           trouble, my version of rebellion was going to the local library
-          because that is where the computers were. I started going there
-          almost every day, including weekends, and that is where I discovered
-          how powerful the internet could be and how much I could learn by
+          because that is where the computers were. I started going there almost
+          every day, including weekends, and that is where I discovered how
+          powerful the internet could be and how much I could learn by
           connecting with people online.
         </AboutDescription>
         <AboutDescription>
@@ -45,10 +49,10 @@ export const About: React.FunctionComponent<IAboutProps> = () => {
           supportive once they understood my curiosity. I got my first laptop,
           and through small indie games I played online, I started learning how
           code actually worked. I built a very simple game on my own. It
-          definitely looked like it was made by a 12-year-old, but when I
-          shared it at school and later found out people online were playing it
-          too, that really stuck with me. Seeing something I created reach
-          other people was incredibly motivating.
+          definitely looked like it was made by a 12-year-old, but when I shared
+          it at school and later found out people online were playing it too,
+          that really stuck with me. Seeing something I created reach other
+          people was incredibly motivating.
         </AboutDescription>
         <AboutDescription>
           From there, I kept building things. Whether that was actual hardware
@@ -56,28 +60,28 @@ export const About: React.FunctionComponent<IAboutProps> = () => {
           school, I worked with friends to create a scheduling app that showed
           class end times, which was better than staring at the one clock on the
           wall. We kept adding features based on feedback from classmates and
-          even added a lunch menu because that is how desperate people were
-          when they were hungry. We ended up with around 300 students using it.
-          That experience made me realize I really enjoy building software that
-          helps people in practical ways. That is what led me to Georgia Tech,
-          where I have continued working on trying to learn more about how I can make an impact on others. 
-          Being surrounded by like-minded peers pushed me to think more deeply about building
-          software that is not just functional, but secure, scalable, and
-          reliable. Now, instead of just helping hungry high schoolers figure
-          out what is on the lunch menu today, I am excited to apply those same
-          skills to roles where I can build reliable systems that help people
-          at a much larger scale.
+          even added a lunch menu because that is how desperate people were when
+          they were hungry. We ended up with around 300 students using it. That
+          experience made me realize I really enjoy building software that helps
+          people in practical ways. That is what led me to Georgia Tech, where I
+          have continued working on trying to learn more about how I can make an
+          impact on others. Being surrounded by like-minded peers pushed me to
+          think more deeply about building software that is not just functional,
+          but secure, scalable, and reliable. Now, instead of just helping
+          hungry high schoolers figure out what is on the lunch menu today, I am
+          excited to apply those same skills to roles where I can build reliable
+          systems that help people at a much larger scale.
         </AboutDescription>
         <AboutDescription>
-          Throughout my academic and professional experience, I have worked
-          with a wide range of technologies, including Java, Python, C/C++,
+          Throughout my academic and professional experience, I have worked with
+          a wide range of technologies, including Java, Python, C/C++,
           JavaScript, TypeScript, React, Node.js, Express, MongoDB, MySQL,
           Firebase, Docker, and Git. I’ve applied these tools across full-stack
           web applications, embedded systems, and machine learning projects.
-          While my work spans multiple domains, I am comfortable with
-          building end-to-end systems—from backend APIs and databases to
-          frontend interfaces. Currently, I am continuing to deepen my understanding of data
-          structures, systems programming, machine learning, and AI, while
+          While my work spans multiple domains, I am comfortable with building
+          end-to-end systems—from backend APIs and databases to frontend
+          interfaces. Currently, I am continuing to deepen my understanding of
+          data structures, systems programming, machine learning, and AI, while
           expanding my experience with modern development tools and
           architectures.
         </AboutDescription>
@@ -93,12 +97,38 @@ export const About: React.FunctionComponent<IAboutProps> = () => {
       <ResumeLinkContainer>
         <ResumeLink
           href="/documents/JasonHuaResume.pdf"
-          download="JasonHuaResume"
+          onClick={(e) => {
+            e.preventDefault();
+            setIsResumeVisible(!isResumeVisible);
+          }}
         >
-          Download Resume
+          {isResumeVisible ? 'Hide Resume' : 'View Resume'}
         </ResumeLink>
-        <DownloadIcon />
       </ResumeLinkContainer>
+
+      {isResumeVisible && (
+        <div
+          style={{
+            marginTop: '2rem',
+            width: '100%',
+            height: '800px',
+            display: 'flex',
+            justifyContent: 'center',
+          }}
+        >
+          <iframe
+            src="/documents/JasonHuaResume.pdf"
+            style={{
+              width: '100%',
+              maxWidth: '800px',
+              height: '100%',
+              border: 'none',
+              borderRadius: '8px',
+            }}
+            title="Jason Hua Resume"
+          />
+        </div>
+      )}
     </AboutContainer>
   );
 };
