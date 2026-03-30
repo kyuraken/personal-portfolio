@@ -38,6 +38,4 @@ next-env.d.ts
 # velite generated
 /.velite
 /public/static
-
-# claude
 .claude/

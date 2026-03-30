@@ -97,7 +97,7 @@ export const About: React.FunctionComponent<IAboutProps> = () => {
       <ResumeLinkContainer>
         <ResumeLink
           href="/documents/JasonHuaResume.pdf"
-          onClick={(e) => {
+          onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
             e.preventDefault();
             setIsResumeVisible(!isResumeVisible);
           }}
