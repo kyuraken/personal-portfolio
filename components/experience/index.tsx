@@ -35,10 +35,34 @@ type TExperience = {
 const Experience = () => {
   const experiences: TExperience[] = [
     {
-      company: 'University of Indianapolis, Masters of Data Science Program',
+      company: 'Principal Financial Group',
+      title: 'Software Engineering Intern (Principal Asset Management Team)',
+      startDate: 'May',
+      endDate: 'Aug 2026',
+      isPresent: false,
+      location: '',
+      skills: [
+        'AWS',
+        'AWS CDK',
+        'Amazon S3',
+        'TypeScript',
+        'Serverless',
+        'Cloud Migration',
+        'Machine Learning',
+        'Automation',
+      ],
+      jobDescriptions: [
+        'Part of the Principal Asset Management technology team modernizing investment management platforms with cloud-based AWS solutions spanning analytics, automation, machine learning, and serverless technologies.',
+        'Helping transition the core data infrastructure from MarkitEDM to cloud-based AWS solutions, improving scalability and reducing manual overhead.',
+        'Redesigned the S3 bucket lifecycle management API within an internal AWS CDK library, enabling dynamic computation of storage class transitions based on data retention policies.',
+      ],
+      isContentRight: false,
+    },
+    {
+      company: 'University of Indianapolis',
       title: 'Firmware Engineering Intern',
-      startDate: '2025',
-      endDate: '2025',
+      startDate: 'May',
+      endDate: 'Aug 2025',
       isPresent: false,
       location: 'Indianapolis, IN',
       skills: [
@@ -54,6 +78,20 @@ const Experience = () => {
         'Improved configuration UI to streamline firmware updates, device onboarding, and device ID assignment.',
         'System design directly influenced Endress+Hauser to develop a capital investment plan based on the proposed system.',
         'Beta tested neural networks and deep learning programs and tuning configurations for course curriculum.',
+      ],
+      isContentRight: true,
+    },
+    {
+      company: 'Chick-fil-A',
+      title: 'Trainer',
+      startDate: 'Jan 2023',
+      endDate: 'Aug 2023',
+      isPresent: false,
+      location: 'Fishers, IN',
+      skills: ['Training', 'Customer Service', 'Operations'],
+      jobDescriptions: [
+        'Trained and oversaw new team members, guiding them through company policies, delegating tasks, and ensuring adherence to operational procedures and customer service standards in a high-volume setting.',
+        'Took customer orders, provided excellent service, and served drinks, managing fast-paced interactions and ensuring customer satisfaction.',
       ],
       isContentRight: false,
     },
@@ -72,20 +110,6 @@ const Experience = () => {
         'Handled cashier duties, including processing transactions and managing end-of-day cash reconciliations.',
       ],
       isContentRight: true,
-    },
-    {
-      company: 'Chick-fil-A',
-      title: 'Trainer',
-      startDate: 'Jan 2023',
-      endDate: 'Aug 2023',
-      isPresent: false,
-      location: 'Fishers, IN',
-      skills: ['Training', 'Customer Service', 'Operations'],
-      jobDescriptions: [
-        'Trained and oversaw new team members, guiding them through company policies, delegating tasks, and ensuring adherence to operational procedures and customer service standards in a high-volume setting.',
-        'Took customer orders, provided excellent service, and served drinks, managing fast-paced interactions and ensuring customer satisfaction.',
-      ],
-      isContentRight: false,
     },
   ];
 
@@ -125,8 +149,14 @@ const Experience = () => {
 
                   <ExperienceDetails>
                     <ExperienceDetail>{experience.title}</ExperienceDetail>
-                    &bull;
-                    <ExperienceDetail>{experience.location}</ExperienceDetail>
+                    {experience.location && (
+                      <>
+                        &bull;
+                        <ExperienceDetail>
+                          {experience.location}
+                        </ExperienceDetail>
+                      </>
+                    )}
                   </ExperienceDetails>
                   <JobDescriptionLists>
                     {experience.jobDescriptions.map((description) => {
@@ -171,8 +201,14 @@ const Experience = () => {
 
                   <ExperienceDetails>
                     <ExperienceDetail>{experience.title}</ExperienceDetail>
-                    &bull;
-                    <ExperienceDetail>{experience.location}</ExperienceDetail>
+                    {experience.location && (
+                      <>
+                        &bull;
+                        <ExperienceDetail>
+                          {experience.location}
+                        </ExperienceDetail>
+                      </>
+                    )}
                   </ExperienceDetails>
                   <JobDescriptionLists>
                     {experience.jobDescriptions.map((description) => {
